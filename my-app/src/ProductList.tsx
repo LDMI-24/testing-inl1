@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { type IProduct } from './models/IProduct';
+import { type IProduct } from './models/ICartProduct';
 
 export const ProductList = () => {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -22,7 +22,7 @@ export const ProductList = () => {
   if (loading) {
     return <div>Loading products...</div>;
   }
-
+//const product = new Product();
 
   return (
     <>
