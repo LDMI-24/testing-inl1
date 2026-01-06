@@ -36,7 +36,7 @@ describe('Shoppingcart basic functions', () => {
   });
 })
 
-describe('Add product to shoppingcart', () => { // Här definierar vi test suit:en
+describe('Add product to shoppingcart', () => {
   test('should succesfully add one product', () => {
     const shoppingcart = new Shoppingcart();
     shoppingcart.addProduct(product1.id, product1.name, product1.price, product1.quantity);
@@ -163,6 +163,14 @@ describe('Apply voucher to shoppingcart', () => {
     shoppingcart.addProduct(product2.id, product2.name, product2.price, product2.quantity);
     shoppingcart.applyVoucher("418_I'm_A_Teapot");
     expect(shoppingcart.discount).toBe(0.25);
+  });
+  test('should fail if voucher is incorrect', () => {
+    const shoppingcart = new Shoppingcart();
+    shoppingcart.addProduct(product1.id, product1.name, product1.price, product1.quantity);
+    shoppingcart.addProduct(product2.id, product2.name, product2.price, product2.quantity);
+    expect(() => {
+    shoppingcart.applyVoucher("identity_crisis_aquired");
+    }).toThrowError('That is not a valid voucher, please try again');
   });
 })
 
@@ -299,5 +307,9 @@ describe('Enter customer data and place order', () => {
     customerData.cardExpiration = "!2/27"
     expect(() => shoppingcart.placeOrder(customerData)).toThrowError('Invalid card details, please try again');
     customerData = customerDataOld
+  });
+  test('should fail if shoppingcart is empty', () => {
+    const shoppingcart = new Shoppingcart();
+    expect(() => shoppingcart.placeOrder(customerData)).toThrowError('Can not order with an empty cart! Why would you do this? Why. Really sit down and think about what you did.');
   });
 })
