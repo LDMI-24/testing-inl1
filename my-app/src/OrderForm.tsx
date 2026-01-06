@@ -41,24 +41,21 @@ export const OrderForm = () => {
               <input className="form-field" id="email" type="email" autoComplete="on" required />
             </label>
           </div>
-          <div className="form-payment-type">
-            <input type="radio" className="form-field" id="invoice" name="payment-options" value="Pay with Invoice" />
-            <label htmlFor="invoice">Pay with Invoice</label>
-            <input type="radio" className="form-field" id="card" name="payment-options" value="Pay with Card" />
-            <label htmlFor="card">Pay with Card</label>
-            <div id="card-details" className="hidden">
-                <label>
-                    <span>Card Number</span>
-                    <input className="form-field" id="card-number" type="number" />
-                </label>
-                <label>
-                    <span>Card Expiration</span>
-                    <input className="form-field" id="card-expiration" type="number" />
-                </label>
-                <label>
-                    <span>Card CVC</span>
-                    <input className="form-field" id="card-cvc" type="number" />
-                </label>
+          <div className="payment-info">
+            <p className='card-txt'>Pay with Card</p>
+            <div id="card-details">
+              <label>
+                  <span>Card Number</span>
+                  <input className="form-field" id="card-number" type="number" />
+              </label>
+              <label>
+                  <span>Card Expiration</span>
+                  <input className="form-field" id="card-expiration" type="number" />
+              </label>
+              <label>
+                  <span>Card CVC</span>
+                  <input className="form-field" id="card-cvc" type="number" />
+              </label>
             </div>
           </div>
         </div>
@@ -70,3 +67,5 @@ export const OrderForm = () => {
     </>
   );
 };
+
+//<form onSubmit={handleSubmit}>
