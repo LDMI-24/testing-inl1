@@ -1,0 +1,52 @@
+.no-visibility {
+  visibility: hidden;
+}
+.hidden {
+  display: none;
+}
+
+form {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .card-txt {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+    .form-fields {
+      grid-column: 2;
+      grid-row: 1;
+
+    }
+    label {
+      font-size: 1.2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 1.2rem;
+    }
+    .form-payment-type {
+      display: flex;
+      align-items: center;
+    }
+
+    .order-buttons {
+      grid-column: 2;
+      grid-row: 3;
+      display: flex;
+      align-items: center;
+      margin-top: 4%;
+      margin-bottom: 4%; 
+    }      
+  }
+
+.cancel-order-btn, .place-order-btn {
+  cursor: pointer;
+  font-family: "Cherry Bomb One", sans-serif; 
+  text-align: center;
+  font-size: 1.2rem;
+  border: 10px;
+  padding: 10px 77px; 
+  border-radius: 12px;
+  display: inline-block;
+}

@@ -1,3 +1,41 @@
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  background-color: rgb(177, 177, 177);
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10vh;
+  li {
+    margin: 0.4rem;
+    padding: 1rem;
+    background: rgb(216, 216, 216);
+    border: 20;
+  }
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  .addToCart, .removeFromCart {
+    margin-right: 0.5rem;
+  }
+}
+
+/*
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,6 +49,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 a {
@@ -66,3 +105,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+*/
