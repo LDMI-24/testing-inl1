@@ -21,6 +21,7 @@ jobs:
           node-version: 'v22.12.0'
 
       - name: Install dependencies
+        working-directory: my-app
         run: npm install
 
       - name: run tests
